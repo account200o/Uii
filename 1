@@ -72,7 +72,7 @@ function UILibrary.Main(PrjName,HideKey)
     table.insert(cors,sandbox(LocalScript2,function()
         local UIGradient = script.parent
         while true do
-    	    UIGradient.Rotation += 1
+    	    UIGradient.Rotation = UIGradient.Rotation + 1
     	    wait()
         end
     end))
@@ -105,7 +105,7 @@ function UILibrary.Main(PrjName,HideKey)
     table.insert(cors,sandbox(LocalScript5,function()
         local UIGradient = script.parent
         while true do
-	        UIGradient.Rotation += 1
+	        UIGradient.Rotation = UIGradient.Rotation + 1
 	        wait()
         end
     end))

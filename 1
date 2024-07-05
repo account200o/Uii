@@ -37,21 +37,20 @@ for i,v in next, PARENT:GetChildren() do
     end
 end
 
-function UILibrary.Main(PrjName,HideKey)
+function UILibrary.Main(PrjName, HideKey)
     local Library = Instance.new("ScreenGui")
     local Main = Instance.new("Frame")
     local LocalScript2 = Instance.new("LocalScript")
     local Top = Instance.new("Frame")
     local TextLabel4 = Instance.new("TextLabel")
     local LocalScript5 = Instance.new("LocalScript")
-    local LocalScript6 = Instance.new("LocalScript")
     local Pages = Instance.new("Frame")
     local UIPageLayout8 = Instance.new("UIPageLayout")
     local ButtonT = Instance.new("Frame")
     local List = Instance.new("ScrollingFrame")
     local UIListLayout11 = Instance.new("UIListLayout")
-    
-    Library.Name= "Library"
+
+    Library.Name = "Library"
     Library.Parent = PARENT
     Library.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
@@ -62,54 +61,47 @@ function UILibrary.Main(PrjName,HideKey)
     Main.AutoLocalize = false
     Main.Localize = false
     Main.AnchorPoint = Vector2.new(0.5, 0.5)
-    Main.BackgroundColor = BrickColor.new("Really black")
     Main.BackgroundColor3 = Color3.new(0, 0, 0)
-    Main.BorderColor = BrickColor.new("Dark taupe")
-    Main.BorderColor3 = Color3.new(0.278431, 0.278431, 0.278431)
-    Main.BorderSizePixel = 0    
+    Main.BorderColor3 = Color3.fromRGB(71, 71, 71)
+    Main.BorderSizePixel = 0
 
     LocalScript2.Name = "Color Effect Script"
     LocalScript2.Parent = Main
 
-    table.insert(cors,sandbox(LocalScript2,function()
-        local UIGradient = script.parent
+    table.insert(cors, sandbox(LocalScript2, function()
+        local UIGradient = script.Parent
         while true do
-    	    UIGradient.Rotation = UIGradient.Rotation + 1
-    	    wait()
+            UIGradient.Rotation = UIGradient.Rotation + 1
+            wait()
         end
     end))
 
     Top.Name = "Top Boarder"
     Top.Parent = Main
     Top.Size = UDim2.new(0, 652, 0, 20)
-    Top.BackgroundColor = BrickColor.new("Smoky grey")
-    Top.BackgroundColor3 = Color3.new(0.356863, 0.356863, 0.533333)
-    Top.BorderColor = BrickColor.new("Institutional white")
-    Top.BorderColor3 = Color3.new(1, 1, 1)
+    Top.BackgroundColor3 = Color3.fromRGB(91, 91, 136)
+    Top.BorderColor3 = Color3.fromRGB(255, 255, 255)
     Top.BorderSizePixel = 0
+
     TextLabel4.Name = "Main Name"
     TextLabel4.Parent = Top
     TextLabel4.Size = UDim2.new(0, 118, 0, 19)
-    TextLabel4.BackgroundColor = BrickColor.new("Mulberry")
-    TextLabel4.BackgroundColor3 = Color3.new(0.258824, 0.129412, 0.388235)
+    TextLabel4.BackgroundColor3 = Color3.fromRGB(66, 33, 99)
     TextLabel4.BackgroundTransparency = 1
-    TextLabel4.BorderColor = BrickColor.new("Really black")
     TextLabel4.BorderColor3 = Color3.new(0, 0, 0)
     TextLabel4.BorderSizePixel = 0
     TextLabel4.Font = Enum.Font.Highway
-    TextLabel4.FontSize = Enum.FontSize.Size14
     TextLabel4.Text = PrjName
-    TextLabel4.TextColor = BrickColor.new("Olive")
-    TextLabel4.TextColor3 = Color3.new(0.733333, 0.764706, 0.121569)
+    TextLabel4.TextColor3 = Color3.fromRGB(187, 195, 31)
     TextLabel4.TextSize = 14
 
     LocalScript5.Name = "color effect script"
     LocalScript5.Parent = Main
-    table.insert(cors,sandbox(LocalScript5,function()
-        local UIGradient = script.parent
+    table.insert(cors, sandbox(LocalScript5, function()
+        local UIGradient = script.Parent
         while true do
-	        UIGradient.Rotation = UIGradient.Rotation + 1
-	        wait()
+            UIGradient.Rotation = UIGradient.Rotation + 1
+            wait()
         end
     end))
 
@@ -117,84 +109,80 @@ function UILibrary.Main(PrjName,HideKey)
     Pages.Position = UDim2.new(0, 118, 0, 21)
     Pages.Visible = false
     Pages.Size = UDim2.new(0, 534, 0, 349)
-    Pages.BackgroundColor = BrickColor.new("Institutional white")
-    Pages.BackgroundColor3 = Color3.new(1, 1, 1)
-    Pages.BorderColor = BrickColor.new("Really black")
+    Pages.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     Pages.BorderColor3 = Color3.new(0, 0, 0)
     Pages.BorderSizePixel = 0
-	UIPageLayout8.Parent = Pages
-	UIPageLayout8.FillDirection = Enum.FillDirection.Vertical
-	UIPageLayout8.HorizontalAlignment = Enum.HorizontalAlignment.Center
-	UIPageLayout8.SortOrder = Enum.SortOrder.LayoutOrder
-	UIPageLayout8.EasingDirection = Enum.EasingDirection.Out
-	UIPageLayout8.EasingStyle = Enum.EasingStyle.Quint
-	UIPageLayout8.Padding = UDim.new(0, 25)
-	UIPageLayout8.TweenTime = 0
-	UIPageLayout8.ScrollWheelInputEnabled = false
-	UIPageLayout8.Animated = false
+
+    UIPageLayout8.Parent = Pages
+    UIPageLayout8.FillDirection = Enum.FillDirection.Vertical
+    UIPageLayout8.HorizontalAlignment = Enum.HorizontalAlignment.Center
+    UIPageLayout8.SortOrder = Enum.SortOrder.LayoutOrder
+    UIPageLayout8.EasingDirection = Enum.EasingDirection.Out
+    UIPageLayout8.EasingStyle = Enum.EasingStyle.Quint
+    UIPageLayout8.Padding = UDim.new(0, 25)
+    UIPageLayout8.TweenTime = 0
+    UIPageLayout8.ScrollWheelInputEnabled = false
+    UIPageLayout8.Animated = false
+
     ButtonT.Parent = Main
     ButtonT.Position = UDim2.new(0, 0, 0.0567567572, 0)
     ButtonT.Visible = false
     ButtonT.Size = UDim2.new(0, 117, 0, 349)
-    ButtonT.BackgroundColor = BrickColor.new("Institutional white")
-    ButtonT.BackgroundColor3 = Color3.new(1, 1, 1)
-    ButtonT.BorderColor = BrickColor.new("Really black")
+    ButtonT.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     ButtonT.BorderColor3 = Color3.new(0, 0, 0)
     ButtonT.BorderSizePixel = 0
+
     List.Parent = ButtonT
     List.Visible = false
     List.Size = UDim2.new(0, 116, 0, 349)
     List.Active = true
-    List.BackgroundColor = BrickColor.new("Institutional white")
-    List.BackgroundColor3 = Color3.new(1, 1, 1)
-    List.BorderColor = BrickColor.new("Really black")
+    List.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     List.BorderColor3 = Color3.new(0, 0, 0)
     List.BorderSizePixel = 0
     List.ScrollBarThickness = 3
+
     UIListLayout11.Parent = List
     UIListLayout11.HorizontalAlignment = Enum.HorizontalAlignment.Center
     UIListLayout11.SortOrder = Enum.SortOrder.LayoutOrder
     UIListLayout11.Padding = UDim.new(0, 5)
 
+    -- Place the input handling code here
     local dragging
-	local dragInput
-	local dragStart
-	local startPos
-	local off = Vector3.new(0,0,0)
+    local dragInput
+    local dragStart
+    local startPos
 
+    local function onInputBegan(input)
+        if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+            dragging = true
+            dragStart = input.Position
+            startPos = Main.Position
+            input.Changed:Connect(function()
+                if input.UserInputState == Enum.UserInputState.End then
+                    dragging = false
+                end
+            end)
+        end
+    end
 
-	local function update(input)
-		local delta = input.Position - dragStart
-		pcall(function()
-			Main:TweenPosition(UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y),"Out","Quad",0.1,true,nil)
-		end)
-	end
-	Main.InputBegan:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-			dragging = true
-			dragStart = input.Position
-			startPos = Main.Position
-			input.Changed:Connect(function()
-				if input.UserInputState == Enum.UserInputState.End then
-					dragging = false
-				end
-			end)
-		end
-	end)
+    Main.InputBegan:Connect(onInputBegan)
 
-	Main.InputChanged:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-			dragInput = input
+    Main.InputChanged:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+            dragInput = input
+        end
+    end)
 
-		end
-	end)
+    InputService.InputChanged:Connect(function(input)
+        if input == dragInput and dragging then
+            local delta = input.Position - dragStart
+            pcall(function()
+                Main:TweenPosition(UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y), "Out", "Quad", 0.1, true, nil)
+            end)
+        end
+    end)
 
-	InputService.InputChanged:Connect(function(input)
-		if input == dragInput and dragging then
-			update(input)
-		end
-	end)
-
+    
     local Tabs = {}
 	function Tabs.Loader()
 		local Circles = Instance.new("Frame")
